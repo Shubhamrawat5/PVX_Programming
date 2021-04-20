@@ -18,11 +18,6 @@ function Card() {
       <div className="text-gray-600">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde porro illo corporis, qui sunt reprehenderit perspiciatis dolor fuga soluta recusandae blanditiis in a consectetur commodi, ea dignissimos eaque ratione veritatis!
       </div>
-      <div className="flex flex-row space-x-2 justify-end items-center">
-        <div className="px-5 py-1 rounded-full bg-blue-200 text-blue-700">Hard</div>
-        <div className="px-5 py-1 rounded-full bg-blue-200 text-blue-700">Horror</div>
-        <div className="px-5 py-1 rounded-full bg-blue-200 text-blue-700">Thriller</div>
-      </div>
     </div>
   );
 };
