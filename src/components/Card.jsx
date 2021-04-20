@@ -8,7 +8,7 @@ function Card(props) {
   return (
     <div
       className={classnames(
-        "rounded-lg bg-white shadow-lg py-4 px-8 flex flex-col space-y-3 justify-center m-1",
+        "rounded-lg bg-white shadow-lg py-4 px-8 flex flex-col space-y-3 justify-center m-1 cursor-pointer",
         "transition duration-500 ease-in-out transform hover:scale-105"
       )}
     >
