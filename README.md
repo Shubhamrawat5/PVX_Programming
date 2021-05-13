@@ -1,3 +1,40 @@
+# Get Started with PVX_Programming :rocket:
+
+## Setup :construction:
+1. Fork and clone this repository.
+2. Run `npm install`.
+3. Run `npm start` to run the app in development mode.
+
+## Structure :books:
+* ### **`index.js`** :page_with_curl:
+  Entry point of our react app, where all the set up for `react-router`, `redux`, `msw` etc will be done.
+* ### **`app.js`** :page_with_curl:
+  In `app.js` all the initial setup for routes and global ui components is done.
+* ### **assets** :file_folder:
+  Here all the assets of the apps are stored.
+* ### **components** :file_folder:
+  Here all the reusable UI components are stored.
+* ### **containers/view (TBD)** :file_folder:
+  Here all the pages of the apps are stored.
+* ### **mocks**
+  Here all the files associated with mocking api requests are stored. more on mocks below.
+
+## Mocks :see_no_evil:
+### **What is mocking?**
+Mocks is like an imitation. It simulates behaviour of real API, which on senging request to endpoint returns pre-defined response and other parameters associated such as response code, headers etc.
+
+
+### **How?**
+We're using [msw (mock service worker)](https://mswjs.io/) library for mocking.
+We have mocks folder under `src`.
+
+#### **`handler.js`** :page_with_curl:
+Here all the different endpoints are defined for wchich we want to mock api request.
+#### **`browser.js`** :page_with_curl:
+Here the worker is configured with all the handlers from `handler.js` file. and further used in `index.js` to start mock server.
+#### **seed** :file_folder:
+Here all the data is defined. it is not necessary to create file in seed, you can also use js objects as well.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
