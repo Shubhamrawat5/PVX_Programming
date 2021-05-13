@@ -1,60 +1,25 @@
+import React, { useEffect, useState } from "react";
+
 import Card from "./Card";
 
 function Cards() {
-  const db = [
-    {
-      skillName: "C++",
-      logo: "https://img.icons8.com/color/240/000000/c-plus-plus-logo.png",
-    },
-    {
-      skillName: "Java",
-      logo: "https://img.icons8.com/color/240/000000/java.png",
-    },
-    {
-      skillName: "Python",
-      logo: "https://img.icons8.com/color/240/000000/python.png",
-    },
-    {
-      skillName: "JavaScript",
-      logo: "https://img.icons8.com/color/240/000000/javascript.png",
-    },
-    {
-      skillName: "C++",
-      logo: "https://img.icons8.com/color/240/000000/c-plus-plus-logo.png",
-    },
-    {
-      skillName: "Java",
-      logo: "https://img.icons8.com/color/240/000000/java.png",
-    },
-    {
-      skillName: "Python",
-      logo: "https://img.icons8.com/color/240/000000/python.png",
-    },
-    {
-      skillName: "JavaScript",
-      logo: "https://img.icons8.com/color/240/000000/javascript.png",
-    },
-    {
-      skillName: "C++",
-      logo: "https://img.icons8.com/color/240/000000/c-plus-plus-logo.png",
-    },
-    {
-      skillName: "Java",
-      logo: "https://img.icons8.com/color/240/000000/java.png",
-    },
-    {
-      skillName: "Python",
-      logo: "https://img.icons8.com/color/240/000000/python.png",
-    },
-    {
-      skillName: "JavaScript",
-      logo: "https://img.icons8.com/color/240/000000/javascript.png",
-    },
-  ];
+  // TODO - Add loading state for languages.
+  const [languages, setLanguages] = useState();
+
+  useEffect(() => {
+    // TODO - User axios and react query if possible.
+    fetch('http://localhost:3001/api/v1/languages')
+      .then((res) => res.json())
+      .then((res) => {
+        setLanguages(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, [])
+
   return (
     <>
-      {db.map((data) => {
-        return <Card data={data} />;
+      {languages && languages.map((data) => {
+        return <Card key={data.id} data={data} />;
       })}
     </>
   );
