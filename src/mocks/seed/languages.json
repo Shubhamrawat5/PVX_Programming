@@ -1,0 +1,66 @@
+{
+  "status": "success",
+  "message": "Successfully fetched languages data.",
+  "data": [
+    {
+      "id": 1,
+      "skillName": "C++",
+      "logo": "https://img.icons8.com/color/240/000000/c-plus-plus-logo.png"
+    },
+    {
+      "id": 2,
+      "skillName": "Java",
+      "logo": "https://img.icons8.com/color/240/000000/java.png"
+    },
+    {
+      "id": 3,
+      "skillName": "Python",
+      "logo": "https://img.icons8.com/color/240/000000/python.png"
+    },
+    {
+      "id": 4,
+      "skillName": "JavaScript",
+      "logo": "https://img.icons8.com/color/240/000000/javascript.png"
+    },
+    {
+      "id": 5,
+      "skillName": "C++",
+      "logo": "https://img.icons8.com/color/240/000000/c-plus-plus-logo.png"
+    },
+    {
+      "id": 6,
+      "skillName": "Java",
+      "logo": "https://img.icons8.com/color/240/000000/java.png"
+    },
+    {
+      "id": 7,
+      "skillName": "Python",
+      "logo": "https://img.icons8.com/color/240/000000/python.png"
+    },
+    {
+      "id": 8,
+      "skillName": "JavaScript",
+      "logo": "https://img.icons8.com/color/240/000000/javascript.png"
+    },
+    {
+      "id": 9,
+      "skillName": "C++",
+      "logo": "https://img.icons8.com/color/240/000000/c-plus-plus-logo.png"
+    },
+    {
+      "id": 10,
+      "skillName": "Java",
+      "logo": "https://img.icons8.com/color/240/000000/java.png"
+    },
+    {
+      "id": 11,
+      "skillName": "Python",
+      "logo": "https://img.icons8.com/color/240/000000/python.png"
+    },
+    {
+      "id": 12,
+      "skillName": "JavaScript",
+      "logo": "https://img.icons8.com/color/240/000000/javascript.png"
+    }
+  ]
+}

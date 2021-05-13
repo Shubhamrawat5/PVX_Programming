@@ -5,6 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
+// User msw only for development (Don't use it in production).
+if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('./mocks/browser');
+  // Starts the mock service worker.
+  worker.start();
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
