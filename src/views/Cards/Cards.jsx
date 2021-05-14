@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Card from "./Card";
+import Card from "../../components/Card";
 
 function Cards() {
   // TODO - Add loading state for languages.
@@ -17,11 +17,13 @@ function Cards() {
   }, [])
 
   return (
-    <>
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
       {languages && languages.map((data) => {
-        return <Card key={data.id} data={data} />;
+        return (
+          <Card key={data.id} data={data} />
+        );
       })}
-    </>
+    </div>
   );
 }
 
