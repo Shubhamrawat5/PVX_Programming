@@ -2,7 +2,7 @@ import dp from "../assets/images/dp.jpg";
 
 function Nav() {
   return (
-    <nav className="p-3 text-right bg-purple-900 text-white">
+    <nav className="p-3 text-right bg-purple-900 text-white w-full">
       <div className="font-center font-semibold text-4xl text-center">
         <img src={dp} alt="" className="w-16 rounded-full inline mr-5" />
         PVX PROGRAMMING
