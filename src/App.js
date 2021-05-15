@@ -11,9 +11,6 @@ function App() {
         <Nav />
       </div>
       <div className="flex flex-col flex-1 bg-gray-100 p-5 w-full">
-        <h2 className="flex flex-none text-xl justify-center items-center mb-2">
-          Select skill related to your query!
-        </h2>
         <div className="flex flex-1 w-full">
           <Cards />
         </div>
