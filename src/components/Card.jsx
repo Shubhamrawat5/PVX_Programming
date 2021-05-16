@@ -1,8 +1,8 @@
 import React from "react";
 import classnames from "classnames";
+import Button from "./Button/Button";
 
-// import CppLogo from "../../assets/images/cpp.svg";
-
+// TODO - Update this component to get title, description etc from props.
 function Card(props) {
   const { skillName, logo } = props.data;
   return (
@@ -21,6 +21,7 @@ function Card(props) {
         illo corporis, qui sunt reprehenderit perspiciatis dolor fuga soluta
         recusandae blanditiis in a consectetur commodi!
       </div>
+      <Button>Know more</Button>
     </div>
   );
 }
