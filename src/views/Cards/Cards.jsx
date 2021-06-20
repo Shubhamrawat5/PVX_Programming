@@ -1,40 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import Card from "../../components/Card";
 import Loader from '../../components/Loader';
+import useLanguages from "../../hooks/useLanguages";
 
 function Cards() {
-  // TODO - Add loading state for languages.
-  const [languages, setLanguages] = useState();
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // TODO - User axios and react query if possible.
-    fetch('http://localhost:3001/api/v1/languages')
-      .then((res) => res.json())
-      .then((res) => {
-        setLanguages(res.data);
-      })
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
-  }, [])
+  const { data: languages, status, error } = useLanguages();
+
+  if (status === 'loading') {
+    return (
+      <div className="flex flex-row justify-center items-center h-full w-full">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (status === 'error') {
+    return (
+      <div>error { error.message }</div>
+    );
+  }
 
   return (
-    <>
-      {loading ? (
-        <div className="flex flex-row justify-center items-center h-full w-full">
-          <Loader />
-        </div>
-      ): ( 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full h-full">
-          {languages && languages.map((data) => {
-            return (
-              <Card key={data.id} data={data} />
-            );
-          })}
-        </div>
-      )}
-    </>
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full h-full">
+      {languages.data && languages.data.map((language) => {
+        return (
+          <Card key={language.id} data={language} />
+        );
+      })}
+    </div>
   );
 }
 
