@@ -4,7 +4,7 @@ import Card from "../../components/Card";
 import Loader from '../../components/Loader';
 import useLanguages from "../../hooks/useLanguages";
 
-function Cards() {
+function Languages() {
 
   const { data: languages, status, error } = useLanguages();
 
@@ -33,4 +33,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default Languages;
