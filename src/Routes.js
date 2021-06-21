@@ -1,13 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import ROUTES from './constants/ROUTES';
-import Languages from './views/Languages/Languages';
+import { PublicRoutes } from './constants/ROUTES';
 
 function Routes() {
 	return (
 		<Switch>
-			<Route exact path={ROUTES.home} component={Languages} />
+			{ PublicRoutes.map((route) => (
+				<Route exact path={route.path} component={route.component} />
+			)) }
 		</Switch>
 	);
 }
