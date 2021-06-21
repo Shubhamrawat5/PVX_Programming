@@ -41,11 +41,11 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.1.0",
+    "@tailwindcss/postcss7-compat": "^2.2.2",
     "autoprefixer": "^9.8.6",
     "msw": "^0.28.2",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.0"
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.2"
   },
   "msw": {
     "workerDirectory": "public"
