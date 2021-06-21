@@ -1,8 +1,8 @@
 import React from "react";
 
-import Cards from "./views/Cards/Cards";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Routes from "./Routes";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       </div>
       <div className="flex flex-col flex-1 bg-gray-100 p-5 w-full">
         <div className="flex flex-1 w-full">
-          <Cards />
+          <Routes />
         </div>
         <h2 className="flex flex-none text-lg justify-center items-center mt-4">
           skill related to your query missing? contact in
