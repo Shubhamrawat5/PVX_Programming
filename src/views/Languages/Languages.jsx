@@ -1,12 +1,19 @@
 import React from "react";
+import { useTransition, animated } from "react-spring";
 
 import Card from "../../components/Card";
 import Loader from '../../components/Loader';
 import useLanguages from "../../hooks/useLanguages";
 
 function Languages() {
-
   const { data: languages, status, error } = useLanguages();
+  
+  const transitions = useTransition(languages && languages.data, {
+    from : { opacity: 0, scale: 0 },
+    enter: { opacity: 1, scale: 1 },
+    leave: { opacity: 1, scale: 0 },
+    config: { duration: 500 },
+  });
 
   if (status === 'loading') {
     return (
@@ -24,11 +31,19 @@ function Languages() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full h-full">
-      {languages.data && languages.data.map((language) => {
-        return (
-          <Card key={language.id} data={language} />
-        );
-      })}
+      {
+        transitions((style, item) => {
+          return (
+            item ? (
+              <animated.div
+                style={style}
+              >
+                <Card data={item} />
+              </animated.div>) 
+            : null
+          );
+        })
+      }
     </div>
   );
 }
