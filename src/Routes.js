@@ -8,7 +8,7 @@ function Routes() {
 	return (
 		<Switch>
 			{ PublicRoutes.map((route) => (
-				<Route exact path={route.path} component={route.component} />
+				<Route key={route.path} exact path={route.path} component={route.component} />
 			)) }
 			<Route exact path="*" component={NotFound} />
 		</Switch>
